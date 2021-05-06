@@ -20,8 +20,8 @@ const ImageSlider = ({ slides }) => {
 
     let slider = slides.map((slide, index) => {
         return (
-            <>
-                <div className={index === current ? 'slide slide-active' : 'no-slide' } key={index}>
+            <div key={slide.id}>
+                <div className={index === current ? 'slide slide-active' : 'no-slide' } >
                     
                     {index === current && (
                         <>
@@ -38,7 +38,7 @@ const ImageSlider = ({ slides }) => {
                     )}
 
                 </div>
-            </>
+            </div>
         );
     });
 
