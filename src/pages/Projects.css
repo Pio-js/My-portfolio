@@ -3,23 +3,14 @@
 }
 
 #pro-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     max-height: 85vh;
     padding: 0 2vw 0 2vw;
     overflow: hidden;
 }
 
-.project {
-    width: 33vmin;
-    min-width: 260px;
-    height: 30vmin;
-    min-height: 200px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.pro-img {
-    width: 90%;
-    height: 80%;
+#projects-text {
+    color: white;
 }

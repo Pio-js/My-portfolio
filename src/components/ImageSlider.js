@@ -1,8 +1,10 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import './ImageSlider.css';
 import { MdKeyboardArrowRight, MdKeyboardArrowLeft } from 'react-icons/md'
 
-const ImageSlider = ({ slides }) => {
+const ImageSlider = ({ setProjectName, setTechnology, setDescription, setImages, slides }) => {
+    const history = useHistory();
     const [current, setCurrent] = useState(0);
     const length = slides.length;
 
@@ -19,6 +21,13 @@ const ImageSlider = ({ slides }) => {
     }
 
     let slider = slides.map((slide, index) => {
+        function setterHandler(){
+            setProjectName(slide.projName);
+            setTechnology(slide.technology);
+            setDescription(slide.fullDescription);
+            setImages(slide.images);
+            history.push('/project');
+        }
         return (
             <div key={slide.id}>
                 <div className={index === current ? 'slide slide-active' : 'no-slide' } >
@@ -29,7 +38,8 @@ const ImageSlider = ({ slides }) => {
                                 <h3>{slide.projName}</h3>
                             </div>
 
-                            <img src={slide.image} alt={slide.projName}/>
+                            {/* <Link to="/project" setProjectName={setProjectName(slide.projName)} setTechnology={setTechnology(slide.technology)} setDescription={setDescription(slide.fullDescription)} setImages={setImages(slide.images)}> */}
+                                <img className="slide-img" src={slide.preview} alt={slide.projName} onClick={setterHandler}/>
                             
                             <div className ="project-description">
                                 <p>{slide.description}</p>

@@ -5,20 +5,16 @@ import { useState, useRef, useEffect } from 'react';
 export default function Home(){
 
 
-  const [hover, setHover] = useState({'pointer-events':'none'});
+  const [hover, setHover] = useState({pointerEvents:'none'});
 
   useEffect(
     () => {
       setTimeout(() => {
-        setHover({'pointer-events':'unset'});
+        setHover({pointerEvents:'unset'});
       }, 4000);
     },
     []
   );
-
-  const [hoverRef, isHovered] = useHover();
-
-  let style = isHovered ? {position:'relative'} : {position:'absolute'};
 
   function useHover() {
     const [value, setValue] = useState(false);//to change position style
@@ -35,6 +31,10 @@ export default function Home(){
     );
     return [ref, value];
   }
+
+  const [hoverRef, isHovered] = useHover();
+
+  let style = isHovered ? {position:'relative'} : {position:'absolute'};
 
   return (
       <section id='home' style={hover}>

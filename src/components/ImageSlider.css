@@ -1,24 +1,20 @@
 .slider {
     position: relative;
-    width: 80vw;
-    height: 80vh;
+    width: 60vw;
+    height: 60vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    background-color: darkgray;
     overflow: hidden;
     border: 2px solid white;
     border-radius: 15px;
-}
-
-.slider img {
-    margin-left: 50%;
-    transform: translateX(-50%);
+    box-shadow: inset 2px 2px 5px rgb(22 38 46);
 }
 
 .right-arrow, .left-arrow  {
     position: absolute;
     width: 40px;
-    top: 50%;
+    top: 27vh;
     font-size: 3rem;
     background-color: white;
     color: rgb(22, 38, 46);
@@ -42,43 +38,16 @@
     background-color: grey;
 }
 
-.project-title, .project-description {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 90%;
-    height: fit-content;
-    background-color: rgba(22, 38, 46, 0.9);
-    color: white;
-    font-size: 1.3em;
-    z-index: 10;
-    left: 5%;
-    border-radius: 15px;
-}
-
-.project-title {
-    top: 35px;
-}
-
-.project-description{
-    bottom: 30px;
-}
-
-.project-description > p {
-    position: relative;
-    width: 100%;
-    font-size: 1.2em;
-    text-align: center;
-}
-
 .no-slide {
     display: none;
 }
 
 .slide {
     width: 100%;
-    height: 80vh;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     opacity: 0;
     transition-duration: 1s ease;
 }
@@ -89,6 +58,44 @@
     transform: scale(1.08);
     animation: show 1s ease-in-out;
     animation-fill-mode: forwards;
+}
+
+.slide-img {
+    max-width: 80vw;
+    max-height: 60vh;
+}
+
+.project-title, .project-description {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: rgba(152, 195, 230, 0.9);
+    color: black;
+    font-size: 1.3em;
+    box-shadow: 5px 0 5px black;
+}
+
+.project-title {
+    top: 1.2em;
+}
+
+.project-title > h3 {
+    margin: 0;
+    padding: 10px 0 10px 0;
+}
+
+.project-description{
+    bottom: 1.2em;
+}
+
+.project-description > p {
+    width: 100%;
+    font-size: 1.2em;
+    text-align: center;
+    margin: 0;
+    padding: 10px 20px 10px 20px;
 }
 
 @keyframes show{
@@ -103,5 +110,13 @@
 @media (max-width: 700px) {
     .slider {
         width: 100%;
+    }
+
+    .project-description > p {
+        font-size: 0.8em;
+    }
+
+    .left-arrow:hover, .right-arrow:hover{
+        background-color: white;
     }
 }
