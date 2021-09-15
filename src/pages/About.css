@@ -9,6 +9,7 @@
 }
 
 #about-container {
+    width: 80%;
     display: flex;
     flex-wrap: wrap;
     max-height: 60vh;
@@ -19,6 +20,7 @@
 #about-container > p {
     width: 60%;
     min-width: 380px;
+    text-align: justify;
     padding-left: 20px;
     padding-right: 20px;
 }
@@ -109,6 +111,10 @@
     #about {
         background-image: url('../images/about-bg.jpg'), linear-gradient(rgb(22, 38, 46) 20vh, rgb(216, 166, 100) 20vh 21vh, white 21vh 94vh);
         background-size: 200%;
+    }
+
+    #about-container {
+        width: 100%;
     }
 
     #about-container > p {

@@ -15,7 +15,6 @@ export default function Home(){
     },
     []
   );
-  
   function useHover() {
     const [value, setValue] = useState(false);//to change position style
     const ref = useRef(null);
