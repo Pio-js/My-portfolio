@@ -33,7 +33,7 @@ export const SliderData = [
         id:0,
         projName: 'Roberto Vicchio - musician',
         preview: web1,
-        description: 'I am actually working on this project.',
+        description: 'I am currently working on this project.',
         fullDescription: 'I am creating this website for a musician. This project will have a back-end side, in order to change easily texts, images and events. I will create a page where the Client can change everything by himself.',
         technology: [css, html, js, react, nodeJS, express, mongoDB, mongoose],
         images: [{image:robMobHome, desc:'Mobile version'}, {image:rebMobEvent, desc:'Mobile version'}, {image:rebMobContact, desc:'Mobile version'}]
