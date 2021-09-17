@@ -37,8 +37,6 @@ const ImageSlider = ({ setProjectName, setTechnology, setDescription, setImages,
                             <div className ="project-title">
                                 <h3>{slide.projName}</h3>
                             </div>
-
-                            {/* <Link to="/project" setProjectName={setProjectName(slide.projName)} setTechnology={setTechnology(slide.technology)} setDescription={setDescription(slide.fullDescription)} setImages={setImages(slide.images)}> */}
                                 <img className="slide-img" src={slide.preview} alt={slide.projName} onClick={setterHandler}/>
                             
                             <div className ="project-description">
