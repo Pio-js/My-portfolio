@@ -9,6 +9,19 @@ export default function Project(props) {
     const {projectName, technology, description, images} = props;
     const [popup, setPopup] = useState();
 
+    /* const [current, setCurrent] = useState(0);
+    const length = images.length;
+    const nextSlide = () => {
+        setCurrent(current === length - 1 ? 0 : current + 1);
+    };
+    const prevSlide = () => {
+        setCurrent(current === 0 ? length - 1 : current - 1);
+    };
+
+    if (!Array.isArray(slides) || images.length <= 0) {
+        return null;
+    } */
+
     const closeBtn = <div id='close-popup-btn' onClick={()=>setPopup()}>X</div>
 
     console.log(popup);
@@ -25,6 +38,7 @@ export default function Project(props) {
                         </div>
                     </div>
                     <h2 id="popup-img-desc">{popupDesc}</h2>
+                    <div></div>
                 </div>
             </div>
         );
@@ -34,6 +48,7 @@ export default function Project(props) {
         return <img key={key} className="project-icons" src={icon} alt="tech used icon"/>
     });
     const projectImages = images.map((image, key) => {
+        
         return  (
             <div className="project-img-container">
                 <img key={key} className='project-images' src={image.image} alt="project preview" onClick={()=>imgPopup(image.image, image.desc)}/>
