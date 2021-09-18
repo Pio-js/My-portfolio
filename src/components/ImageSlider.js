@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import './ImageSlider.css';
-import { MdKeyboardArrowRight, MdKeyboardArrowLeft } from 'react-icons/md'
+import { MdKeyboardArrowRight, MdKeyboardArrowLeft } from 'react-icons/md';
 
 const ImageSlider = ({ setProjectName, setTechnology, setDescription, setImages, slides }) => {
     const history = useHistory();
