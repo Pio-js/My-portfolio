@@ -140,6 +140,39 @@
     box-shadow: 3px -3px 15px black;
 }
 
+.popup-right-arrow, .popup-left-arrow  {
+    position: absolute;
+    width: 40px;
+    bottom: -40px;
+    font-size: 2rem;
+    background-color: rgb(100, 100, 100);
+    color: white;
+    border-radius: 0 0 5px 5px;
+    cursor: pointer;
+    user-select: none;
+}
+
+#popup-left-arrow-bg, #popup-right-arrow-bg {
+    position: absolute;
+    width: 40px;
+    bottom: -40px;
+    background-color: rgb(100, 100, 100);
+    border-radius: 0 0 5px 5px;
+    box-shadow: 3px -3px 15px black;
+}
+
+.popup-left-arrow, #popup-left-arrow-bg {
+    left: -15px;
+}
+
+.popup-right-arrow, #popup-right-arrow-bg {
+    right: -15px;
+}
+
+.popup-left-arrow:hover, .popup-right-arrow:hover{
+    color: black;
+}
+
 #project-back-btn {
         color: steelblue;
         cursor: pointer;
@@ -163,5 +196,9 @@
 
     #popup-container {
         max-width: 100%;
+    }
+
+    .popup-left-arrow:hover, .popup-right-arrow:hover{
+        color: white;
     }
 }

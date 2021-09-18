@@ -1,16 +1,18 @@
 import Menu from "../components/Menu";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import './Project.css';
+import { MdKeyboardArrowRight, MdKeyboardArrowLeft } from 'react-icons/md';
 
 export default function Project(props) {
     const history = useHistory();
 
     const {projectName, technology, description, images} = props;
     const [popup, setPopup] = useState();
-
-    /* const [current, setCurrent] = useState(0);
+    const [current, setCurrent] = useState();
     const length = images.length;
+
+    const closeBtn = <div id='close-popup-btn' onClick={()=>setPopup()}>X</div>
     const nextSlide = () => {
         setCurrent(current === length - 1 ? 0 : current + 1);
     };
@@ -18,15 +20,14 @@ export default function Project(props) {
         setCurrent(current === 0 ? length - 1 : current - 1);
     };
 
-    if (!Array.isArray(slides) || images.length <= 0) {
-        return null;
-    } */
-
-    const closeBtn = <div id='close-popup-btn' onClick={()=>setPopup()}>X</div>
-
-    console.log(popup);
+    useEffect(() => {
+        if(current >= 0){
+            imgPopup(images[current].image, images[current].desc);
+        }
+    }, [current]);
 
     function imgPopup(popupImg, popupDesc){
+
         setPopup(
             <div id="popup-absolute">
                 <div id="popup-container">
@@ -38,7 +39,10 @@ export default function Project(props) {
                         </div>
                     </div>
                     <h2 id="popup-img-desc">{popupDesc}</h2>
-                    <div></div>
+                    <MdKeyboardArrowLeft className='popup-left-arrow' onClick={prevSlide} />
+                    <MdKeyboardArrowRight className='popup-right-arrow' onClick={nextSlide} />
+                    <div id="popup-left-arrow-bg"></div>
+                    <div id="popup-right-arrow-bg"></div>
                 </div>
             </div>
         );
@@ -47,11 +51,10 @@ export default function Project(props) {
     const techIcons = technology.map((icon, key) => {
         return <img key={key} className="project-icons" src={icon} alt="tech used icon"/>
     });
-    const projectImages = images.map((image, key) => {
-        
+    const projectImages = images.map((image, index) => {
         return  (
             <div className="project-img-container">
-                <img key={key} className='project-images' src={image.image} alt="project preview" onClick={()=>imgPopup(image.image, image.desc)}/>
+                <img key={index} className='project-images' src={image.image} alt="project preview" onClick={()=>{imgPopup(image.image, image.desc); setCurrent(index)}}/>
             </div>
         );
     });
