@@ -1,9 +1,8 @@
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import './Home.css';
 import { useState, useRef, useEffect } from 'react';
 
 export default function Home(){
-
 
   const [hover, setHover] = useState({pointerEvents:'none'});
 
@@ -32,6 +31,10 @@ export default function Home(){
   }
 
   const [hoverRef, isHovered] = useHover();
+  const location = {
+    pathname: '/about',
+    state: { fromHome: true }
+  }
 
   let style = isHovered ? {position:'relative'} : {position:'absolute'};
 
@@ -40,30 +43,42 @@ export default function Home(){
         <div id='box-container' ref={hoverRef} >
         
           <div id='box-1' className='box' style={style}>
-          <NavLink exact to='/About'>
+          <Link to={{
+            pathname: '/about',
+            state: { fromHome: true }}}
+          >
             <div className='transp-bg'><h1 style={{color: 'purple'}}>About</h1></div>
-            </NavLink>
+          </Link>
           </div>
           
           
           <div id='box-2' className='box' style={style}>
-          <NavLink exact to='/Skills'>
+          <Link to={{
+            pathname: '/skills',
+            state: { fromHome: true }}}
+          >
             <div className='transp-bg'><h1 style={{color: 'blue'}}>Skills</h1></div>
-            </NavLink>
+          </Link>
           </div>
           
           
           <div id='box-3' className='box' style={style}>
-          <NavLink exact to='/Projects'>
+          <Link to={{
+            pathname: '/projects',
+            state: { fromHome: true }}}
+          >
             <div className='transp-bg'><h1 style={{color: 'green'}}>Projects</h1></div>
-            </NavLink>
+          </Link>
           </div>
           
           
           <div id='box-4' className='box' style={style}>
-          <NavLink exact to='/Contact'>
+          <Link to={{
+            pathname: '/contact',
+            state: { fromHome: true }}}
+          >
             <div className='transp-bg'><h1 style={{color: 'tomato'}}>Contact</h1></div>
-            </NavLink>
+          </Link>
           </div>
           
         </div>

@@ -63,7 +63,7 @@ form > button:hover {
     position: relative;
     width: 100%;
     height: 38vmin;
-    min-height: 300px;
+    min-height: 250px;
     background-image: url('../images/me-contact.jpg');
     background-repeat: no-repeat;
     background-size: contain;
