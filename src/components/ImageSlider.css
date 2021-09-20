@@ -63,6 +63,7 @@
 .slide-img {
     max-width: 80vw;
     max-height: 60vh;
+    cursor: pointer;
 }
 
 .project-title, .project-description {

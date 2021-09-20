@@ -17,31 +17,75 @@
 
 #home-half1 {
     justify-content: flex-end;
-    animation: shift-left 2s linear;
+    animation: shift-left 2.1s linear;
+    box-shadow: 0 20px 95px 5px black;
 }
 
 #home-half2 {
     justify-content: flex-start;
-    animation: shift-right 2s linear;
+    animation: shift-right 2.1s linear;
+    box-shadow: -20px 0 95px 5px black;
 }
 
 @keyframes shift-left {
     0% {
         transform: translate(0);
+        
+    }
+    20% {
         border-right: 1px solid white;
     }
+
+    25% {
+        border-right: 2px solid white;
+    }
+
+    30% {
+        border-right: 1px solid white;
+    }
+
+    40% {
+        border-right: 2px solid white;
+    }
+
+    70% {
+        border-right: 1px solid white;
+    }
+
     100% {
-        transform: translateX(-100%);
+        transform: translateX(-110%);
+        border-right: 2px solid white;
     }
 }
 
 @keyframes shift-right {
     0% {
         transform: translate(0);
+        
+    }
+    20% {
         border-left: 1px solid white;
     }
+
+    25% {
+        border-left: 2px solid white;
+    }
+
+    30% {
+        border-left: 1px solid white;
+    }
+
+    40% {
+        border-left: 2px solid white;
+    }
+
+    70% {
+        border-left: 1px solid white;
+    }
+
     100% {
-        transform: translateX(100%);
+        transform: translateX(110%);
+        border-left: 2px solid white;
     }
 }
 

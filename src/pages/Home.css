@@ -20,6 +20,7 @@
     height: 300px;
     border-radius: 50%;
     border: 2px solid white;
+    box-shadow: -1px -1px 15px rgb(22, 38, 46) inset;
 }
 
 #box-container:hover {
