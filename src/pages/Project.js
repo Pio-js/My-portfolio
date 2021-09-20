@@ -20,12 +20,6 @@ export default function Project(props) {
         setCurrent(current === 0 ? length - 1 : current - 1);
     };
 
-    useEffect(() => {
-        if(current >= 0){
-            imgPopup(images[current].image, images[current].desc);
-        }
-    }, [current]);
-
     function imgPopup(popupImg, popupDesc){
 
         setPopup(
@@ -39,22 +33,33 @@ export default function Project(props) {
                         </div>
                     </div>
                     <h2 id="popup-img-desc">{popupDesc}</h2>
+                    {length > 1 ? 
+                    <>
                     <MdKeyboardArrowLeft className='popup-left-arrow' onClick={prevSlide} />
                     <MdKeyboardArrowRight className='popup-right-arrow' onClick={nextSlide} />
                     <div id="popup-left-arrow-bg"></div>
                     <div id="popup-right-arrow-bg"></div>
+                    </>
+                    :
+                    null}
                 </div>
             </div>
         );
     }
+
+    useEffect(() => {
+        if(current >= 0){
+            imgPopup(images[current].image, images[current].desc);
+        }
+    }, [current]);
 
     const techIcons = technology.map((icon, key) => {
         return <img key={key} className="project-icons" src={icon} alt="tech used icon"/>
     });
     const projectImages = images.map((image, index) => {
         return  (
-            <div className="project-img-container">
-                <img key={index} className='project-images' src={image.image} alt="project preview" onClick={()=>{imgPopup(image.image, image.desc); setCurrent(index)}}/>
+            <div key={index} className="project-img-container">
+                <img className='project-images' src={image.image} alt="project preview" onClick={()=>{imgPopup(image.image, image.desc); setCurrent(index)}}/>
             </div>
         );
     });

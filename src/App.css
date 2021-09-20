@@ -192,6 +192,6 @@ p {
 
 @media (orientation: landscape) {
   section {
-    overflow-y: scroll;
+    overflow-y: auto;
   }
 }

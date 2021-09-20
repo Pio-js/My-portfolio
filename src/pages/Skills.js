@@ -1,7 +1,10 @@
 import Menu from '../components/Menu';
 import './Skills.css';
+import AnimationHome from '../components/AnimationHome';
+import { useLocation } from 'react-router-dom';
 
 export default function Skills(){
+    const location = useLocation();
 
     const skills = [
         {id: 0, skillName: 'HTML', average: '70%'},
@@ -30,6 +33,7 @@ export default function Skills(){
 
     return (
         <section id="skills">
+            <AnimationHome location={location}/>
             <div className="menu-w"><Menu/></div>
             <div id="skills-container" className="page-container">
                 <div id="skills-txt" className="slide-in-right">

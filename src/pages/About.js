@@ -1,9 +1,15 @@
+import { useEffect, useState } from 'react';
 import Menu from '../components/Menu';
 import './About.css';
+import AnimationHome from '../components/AnimationHome';
+import { useLocation } from 'react-router-dom';
 
 export default function About(){
+    const location = useLocation();
+
     return (
         <section id="about">
+            <AnimationHome location={location}/>
             <div className="menu-w"><Menu/></div>
             <div id="about-container" className="page-container">
                 <div id="my-pic" className="slide-in-top"></div>
