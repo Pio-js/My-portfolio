@@ -12,7 +12,8 @@
     height: 100%;
     display: flex;
     align-items: center;
-    background-color: rgb(22, 38, 46);
+    background-color: rgba(22, 38, 46, 0.6);
+    backdrop-filter: blur(10px);
 }
 
 #home-half1 {
@@ -30,7 +31,6 @@
 @keyframes shift-left {
     0% {
         transform: translate(0);
-        
     }
     20% {
         border-right: 1px solid white;
@@ -46,6 +46,7 @@
 
     40% {
         border-right: 2px solid white;
+        backdrop-filter: blur(10px);
     }
 
     70% {
