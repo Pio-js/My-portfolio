@@ -2,6 +2,7 @@
     position: fixed;
     justify-content: center;
     align-items: center;
+    height: 100vh;
     background-color: transparent;
     overflow-x: hidden;
     z-index: 1000;
@@ -12,7 +13,7 @@
     height: 100%;
     display: flex;
     align-items: center;
-    background-color: rgba(22, 38, 46, 0.6);
+    background-color: var(--primary);
     backdrop-filter: blur(10px);
 }
 
@@ -31,30 +32,13 @@
 @keyframes shift-left {
     0% {
         transform: translate(0);
-    }
-    20% {
-        border-right: 1px solid white;
-    }
-
-    25% {
+        background-color: rgba(37, 171, 217, 0.9);
         border-right: 2px solid white;
-    }
-
-    30% {
-        border-right: 1px solid white;
-    }
-
-    40% {
-        border-right: 2px solid white;
-        backdrop-filter: blur(10px);
-    }
-
-    70% {
-        border-right: 1px solid white;
     }
 
     100% {
         transform: translateX(-110%);
+        background-color: rgba(37, 171, 217, 0.1);
         border-right: 2px solid white;
     }
 }
@@ -62,30 +46,14 @@
 @keyframes shift-right {
     0% {
         transform: translate(0);
-        
-    }
-    20% {
-        border-left: 1px solid white;
-    }
-
-    25% {
+        background-color: rgba(37, 171, 217, 0.9);
         border-left: 2px solid white;
     }
-
-    30% {
-        border-left: 1px solid white;
-    }
-
-    40% {
-        border-left: 2px solid white;
-    }
-
-    70% {
-        border-left: 1px solid white;
-    }
+    
 
     100% {
         transform: translateX(110%);
+        background-color: rgba(37, 171, 217, 0.1);
         border-left: 2px solid white;
     }
 }

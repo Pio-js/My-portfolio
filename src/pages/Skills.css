@@ -1,5 +1,6 @@
 #skills {
-    background-color: rgb(22, 38, 46);
+    background-color: var(--skills);
+    overflow-x: hidden;
 }
 
 #skills-container {
@@ -40,7 +41,7 @@
     height: 3vh;
     min-height: 22px;
     width: 0;
-    background-color: rgb(216, 166, 100);
+    background-color: rgb(202, 100, 216);
 }
 
 .skill-name {
@@ -53,7 +54,7 @@
     max-width: 200px;
     height: 4vh;
     min-height: 22px;
-    background-color: rgba(119, 91, 54, 0.5);
+    background-color: rgba(111, 54, 119, 0.5);
     font-size: 1.3em;
     color: white;
 }

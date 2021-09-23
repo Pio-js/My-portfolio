@@ -1,7 +1,10 @@
 #home {
+    position: fixed;
     justify-content: center;
     align-items: center;
-    background-color: rgb(22, 38, 46);
+    height: 100vh;
+    background-color: var(--primary);
+    overflow: hidden;
 }
 
 #box-container {
@@ -20,7 +23,7 @@
     height: 300px;
     border-radius: 50%;
     border: 2px solid white;
-    box-shadow: -1px -1px 15px rgb(22, 38, 46) inset;
+    box-shadow: -1px -1px 15px var(--primary) inset;
 }
 
 #box-container:hover {

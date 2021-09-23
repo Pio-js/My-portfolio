@@ -31,10 +31,6 @@ export default function Home(){
   }
 
   const [hoverRef, isHovered] = useHover();
-  const location = {
-    pathname: '/about',
-    state: { fromHome: true }
-  }
 
   let style = isHovered ? {position:'relative'} : {position:'absolute'};
 

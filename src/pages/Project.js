@@ -66,7 +66,7 @@ export default function Project(props) {
 
     return (
         <section id="project-page">
-            <div className="menu-w"><Menu/></div>
+            <Menu/>
             <div id="project-page-container" className="page-container">
                 {popup}
                 <h2 id="project-title">Project: {projectName}</h2>
@@ -84,7 +84,8 @@ export default function Project(props) {
                         {projectImages}
                     </div>
                 </div>
-                <h3 id="project-back-btn" onClick={()=>history.goBack()}>Back</h3>
+                {/* button back - should be history.goBack() - but page project will have the same state lor location */}
+                <h3 id="project-back-btn" onClick={()=>history.push('./projects')}>Back</h3>
             </div>
         </section>
     )

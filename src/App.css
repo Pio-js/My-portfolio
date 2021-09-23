@@ -1,8 +1,28 @@
+:root {
+  --primary: rgb(30, 141, 179);
+  --primary-dark: rgb(32, 144, 183);
+  --primary-hell: rgb(217, 214, 37);
+  --about: rgb(30, 107, 179);
+  --about-dark: rgb(21, 78, 131);
+  --about-hover: rgba(123, 178, 204, 0.6);
+  --skills: rgb(37, 171, 217);
+  --skills-dark: rgb(32, 144, 183);
+  --skills-hover: rgba(207, 27, 192, 0.8);
+  --projects: rgb(212, 127, 16);
+  --projects-dark: rgb(131, 79, 11);
+  --projects-hover: rgba(219, 165, 65, 0.8);
+  --contact: rgb(187, 34, 85);
+  --contact-dark: rgb(119, 22, 54);
+  --contact-hover: rgba(157, 35, 206, 0.8);
+}
+
 .App {
   text-align: center;
 }
 
 body {
+  width: 100vw;
+  height: 100vh;
   overflow: hidden;
 }
 
@@ -10,7 +30,6 @@ section {
   width: 100%;
   height: 94vh;
   display: flex;
-  background-color: rgb(22, 38, 46);
   margin: 0;
   padding: 0;
 }
@@ -35,27 +54,76 @@ nav {
   display: flex;
   flex-direction: column;
   padding-top: 10vh;
+  margin-left: 10px;
 }
 
-.nav-btn, .nav-btn > a {
-  font-size: 1.5em;
-  background-color: rgb(216, 166, 100);
-  margin-bottom: 2vh;
-  color: white;
-  padding: 10px;
-  box-shadow: 2px 2px 5px  rgb(22, 38, 46);
+.about-btn {
+  background: var(--about);
+  box-shadow: 0 6px 0 var(--about-dark), 0 5px 15px -4px #000;
 }
 
-.nav-btn:hover {
-  background-color: grey;
+.about-btn:hover,
+.about-btn:focus {
+  background: var(--about-hover);
+}
+
+.skills-btn {
+  background: var(--skills);
+  box-shadow: 0 6px 0 var(--skills-dark), 0 5px 15px -4px #000;
+}
+
+.skills-btn:hover,
+.skills-btn:focus {
+  background: var(--skills-hover);
+}
+
+.projects-btn {
+  background: var(--projects);
+  box-shadow: 0 6px 0 var(--projects-dark), 0 5px 15px -4px #000;
+}
+
+.projects-btn:hover,
+.projects-btn:focus {
+  background: var(--projects-hover);
+}
+
+.contact-btn {
+  background: var(--contact);
+  box-shadow: 0 6px 0 var(--contact-dark), 0 5px 15px -4px #000;
+}
+
+.contact-btn:hover,
+.contact-btn:focus {
+  background: var(--contact-hover);
+}
+
+.nav-btn {
+  border: 0;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-family: roboto;
+  font-size: 20px;
+  font-weight: 800;
+  height: 50px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  transition: box-shadow 0.2s ease-in-out, margin-top 0.2s ease-in-out,
+  opacity 0.2s ease-in-out;
+  width: 150px;
+  margin-bottom: 30px;
 }
 
 .active {
-  margin-left: 15px;
-  font-size: 2em;
-  background-color: grey;
-  box-shadow: inset 2px 2px 5px rgb(22, 38, 46);
-  border: 1px solid rgb(216, 166, 100);
+  box-shadow: none;
+  color: rgb(245, 225, 100);
+}
+
+.active:hover {
+  background-color: transparent;
 }
 
 a {
@@ -74,10 +142,25 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(22, 38, 46);
   color: white;
   border-top: 2px solid white;
   box-sizing: border-box;
+}
+
+.footer-about {
+  background-color: var(--about);
+}
+
+.footer-skills {
+  background-color: var(--skills);
+}
+
+.footer-projects {
+  background-color: var(--projects);
+}
+
+.footer-contact {
+  background-color: var(--contact);
 }
 
 #footer > h5 {
@@ -168,7 +251,7 @@ p {
   }
 
   .nav-closed {
-    color: rgb(216, 166, 100);
+    color: rgb(245, 225, 100);
     width: 30px;
     height: 30px; 
   }
@@ -184,9 +267,8 @@ p {
   }
 
   .active {
-    background-color: rgb(22, 38, 46);
+    background-color: var(--primary);
     font-size: 1.5em;
-    margin-right: 10px;
   }
 }
 

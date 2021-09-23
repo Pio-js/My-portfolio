@@ -1,5 +1,5 @@
 #projects {
-    background-color: rgb(22, 38, 46);
+    background-color: var(--projects);
 }
 
 #pro-container {
@@ -12,5 +12,6 @@
 }
 
 #projects-text {
+    width: 70vw;
     color: white;
 }
