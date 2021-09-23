@@ -1,8 +1,8 @@
 /* About */
 
 #about {
-    background-image: url('../images/about-bg.jpg');
-    background-size: cover;
+    background-color: var(--about);
+    background-size: contain;
     background-position: bottom;
     background-repeat: no-repeat;
     overflow: hidden;
@@ -20,9 +20,11 @@
 #about-container > p {
     width: 60%;
     min-width: 380px;
+    margin: 0;
     text-align: justify;
     padding-left: 20px;
     padding-right: 20px;
+    color: white;
 }
 
 .slide-in-right {
@@ -109,7 +111,6 @@
 
 @media (max-width: 700px){
     #about {
-        background-image: url('../images/about-bg.jpg'), linear-gradient(rgb(22, 38, 46) 20vh, rgb(216, 166, 100) 20vh 21vh, white 21vh 94vh);
         background-size: 200%;
     }
 
@@ -120,6 +121,7 @@
     #about-container > p {
         width: 90%;
         min-width: 320px;
+        margin-top: 25px;
     }
     
     #my-pic {

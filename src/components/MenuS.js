@@ -33,19 +33,19 @@ export default function MenuS(){
                 <button onClick={()=>closeMenu(false)}>Home</button>
             </NavLink>
 
-            <NavLink exact to='/About' activeClassName="active">
+            <NavLink to='/about' activeClassName="active">
                 <button onClick={()=>closeMenu(false)}>About</button>
             </NavLink>
 
-            <NavLink exact to='/Skills' activeClassName="active">
+            <NavLink to='/skills' activeClassName="active">
                 <button onClick={()=>closeMenu(false)}>Skills</button>
             </NavLink>
 
-            <NavLink exact to='/Projects' activeClassName="active">
+            <NavLink to='/projects' activeClassName="active">
                 <button onClick={()=>closeMenu(false)}>Projects</button>
             </NavLink>
 
-            <NavLink exact to='/Contact' activeClassName="active">
+            <NavLink to='/contact' activeClassName="active">
                 <button onClick={()=>closeMenu(false)}>Contact</button>
             </NavLink>
             

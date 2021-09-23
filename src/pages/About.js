@@ -18,6 +18,9 @@ export default function About(){
                 <br></br>
                 In the past I did several web sites with <b>Wordpress</b> creating <i>layout, design and content</i>. Sometimes I created some graphic works.
                 </p>
+                <p>
+                    <b style={{fontSize: '2em', color: 'yellow', textAlign: 'center'}}>Work in Progress</b>
+                </p>
             </div>
         </section>
     );

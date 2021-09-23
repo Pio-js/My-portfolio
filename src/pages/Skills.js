@@ -13,11 +13,11 @@ export default function Skills(){
         {id: 3, skillName: 'React', average: '60%'},
         {id: 4, skillName: 'NodeJS', average: '50%'},
         {id: 5, skillName: 'MongoDB', average: '50%'},
-        {id: 6, skillName: 'Wordpress', average: '50%'},
-        {id: 7, skillName: 'Photoshop', average: '60%'},
-        {id: 8, skillName: 'Illustrator', average: '60%'},
-        {id: 9, skillName: 'InDesign', average: '60%'},
-        {id: 10, skillName: 'Premiere', average: '60%'}
+        {id: 6, skillName: 'Wordpress', average: '60%'},
+        {id: 7, skillName: 'Photoshop', average: '70%'},
+        {id: 8, skillName: 'Illustrator', average: '70%'},
+        {id: 9, skillName: 'InDesign', average: '70%'},
+        {id: 10, skillName: 'Premiere', average: '70%'}
     ];
 
     let skillsContent = skills.map(item => {
