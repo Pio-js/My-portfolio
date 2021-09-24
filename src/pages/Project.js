@@ -5,6 +5,7 @@ import './Project.css';
 import { MdKeyboardArrowRight, MdKeyboardArrowLeft } from 'react-icons/md';
 
 export default function Project(props) {
+
     const history = useHistory();
 
     const {projectName, technology, description, images} = props;

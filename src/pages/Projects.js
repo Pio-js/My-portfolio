@@ -1,8 +1,9 @@
 import Menu from '../components/Menu';
 import ImageSlider from '../components/ImageSlider';
-import { SliderData } from '../components/SliderData';
+import { SliderData } from '../data/SliderData';
 import './Projects.css';
 import AnimationHome from '../components/AnimationHome';
+import LightAnimation from '../components/LightAnimation';
 import { useLocation } from 'react-router-dom';
 
 export default function Projects(props){
@@ -11,6 +12,7 @@ export default function Projects(props){
     return (
         <section id="projects">
             <AnimationHome location={location}/>
+            <LightAnimation/>
             <div className="menu-w"><Menu/></div>
             <div id="pro-container" className="page-container">
                 <div id="projects-text">

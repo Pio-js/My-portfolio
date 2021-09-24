@@ -18,7 +18,7 @@ export default function Navbar(){
 
     const MenuChoice = () => {
         const width = useViewport();
-        const breakpoint = 700;
+        const breakpoint = 800;
     
         return width < breakpoint ? <MenuS /> : <MenuW />;
     }
