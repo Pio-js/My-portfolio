@@ -1,6 +1,7 @@
 import Menu from '../components/Menu';
 import './Skills.css';
 import AnimationHome from '../components/AnimationHome';
+import LightAnimation from '../components/LightAnimation';
 import { useLocation } from 'react-router-dom';
 
 export default function Skills(){
@@ -34,6 +35,7 @@ export default function Skills(){
     return (
         <section id="skills">
             <AnimationHome location={location}/>
+            <LightAnimation/>
             <div className="menu-w"><Menu/></div>
             <div id="skills-container" className="page-container">
                 <div id="skills-txt" className="slide-in-right">

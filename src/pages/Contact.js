@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import Menu from '../components/Menu';
 import './Contact.css';
 import AnimationHome from '../components/AnimationHome';
+import LightAnimation from '../components/LightAnimation';
 import { useLocation } from 'react-router-dom';
 
 export default function Contact(){
@@ -23,6 +24,7 @@ export default function Contact(){
     return (
         <section id="contact">
             <AnimationHome location={location}/>
+            <LightAnimation/>
             <div className="menu-w"><Menu/></div>
             <div id='contact-container' className="page-container">
                 <p>You find me on LinkedIn<a id="linkedin" href="https://www.linkedin.com/in/pio-saija/" target="blank"></a></p>

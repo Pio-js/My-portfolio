@@ -61,7 +61,7 @@ export const SliderData = [
         projName: 'Greet Now',
         preview: greetnowHome,
         description: 'A web app to create and send greeting cards',
-        fullDescription: 'This is a team project. We created an app to send greeting cards. This project was a good practice and we use it as final project for our graduation day. I created the authentication in the front and back-end using JWT and Bcrypt. Furthermore I created some cores components. This project is not public because it was not completed, but working. For those who are interested I can send them the video to take a look more in detail.',
+        fullDescription: 'This is a team project. We created an app to send greeting cards. This project was a good practice and we use it as final project for our graduation day. I created the authentication in the front and back-end using JWT and Bcrypt. Furthermore I created several cores components. This project is not publicand not published. If you want to know more about that, please just let me know.',
         technology: [css, html, js, react, redux, materialUI, nodeJS, mongoDB, mongoose, clickUp, gitHub, figma],
         images: [{image:greetnowHome, desc:'Desktop version'}, {image:greetnowLogin, desc:'Desktop version'}, {image:greetnowCard, desc:'Desktop version'}]
     }

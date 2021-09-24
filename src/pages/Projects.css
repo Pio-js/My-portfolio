@@ -15,3 +15,8 @@
     width: 70vw;
     color: white;
 }
+
+
+#projects-text > p {
+    margin: 0;
+}

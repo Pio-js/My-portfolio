@@ -1,7 +1,9 @@
 /* About */
 
 #about {
-    background-color: var(--about);
+    display: flex;
+    justify-content: center;
+    background-image: var(--about-gradient);
     background-size: contain;
     background-position: bottom;
     background-repeat: no-repeat;
@@ -9,22 +11,25 @@
 }
 
 #about-container {
-    width: 80%;
+    width: 70%;
     display: flex;
     flex-wrap: wrap;
-    max-height: 60vh;
     flex-direction: row-reverse;
     justify-content: center;
 }
 
-#about-container > p {
+#about-txt {
     width: 60%;
     min-width: 380px;
     margin: 0;
     text-align: justify;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 20px;
     color: white;
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(30px);
+    border: 1px solid grey;
+    border-radius: 15px;
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
 }
 
 .slide-in-right {
@@ -105,11 +110,11 @@
 
 @media (min-width: 1200px){
     #about-container > p {
-        font-size: 2em;
+        font-size: 1.6em;
     }
 }
 
-@media (max-width: 700px){
+@media (max-width: 800px){
     #about {
         background-size: 200%;
     }
