@@ -43,7 +43,7 @@ export default function Project(props) {
         if(currentProject!=null){
             setProjectName(SliderData[currentProject].projName);
             setTechnology(SliderData[currentProject].technology);
-            setDescription(SliderData[currentProject].description);
+            setDescription(SliderData[currentProject].fullDescription);
             setImages(SliderData[currentProject].images);
             history.push('/project');
         }
