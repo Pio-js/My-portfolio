@@ -3,15 +3,57 @@ import { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import './Project.css';
 import { MdKeyboardArrowRight, MdKeyboardArrowLeft } from 'react-icons/md';
+import { SliderData } from "../data/SliderData";
 
 export default function Project(props) {
 
     const history = useHistory();
 
-    const {projectName, technology, description, images} = props;
+    const {projectName, technology, description, images, setProjectName, setTechnology, setDescription, setImages} = props;
     const [popup, setPopup] = useState();
     const [current, setCurrent] = useState();
+    const [currentProject, setCurrentProject] = useState(null);
+    const [projectButtons, setProjectButtons] = useState(null);
     const length = images.length;
+    const projectsLength = SliderData.length
+
+    useEffect(() => {
+        SliderData.filter((data, index) => {
+            
+            const nextProject = () => {
+                setCurrentProject(currentProject === projectsLength - 1 ? 0 : currentProject + 1);
+            };
+            const prevProject = () => {
+                setCurrentProject(currentProject === 0 ? projectsLength - 1 : currentProject - 1);
+            };
+            if(data.projName == projectName){
+                setCurrentProject(index);
+                
+                setProjectButtons(
+                    <div id="prev-next-btn">
+                        <div id="prev-btn" onClick={prevProject}><MdKeyboardArrowLeft className="proj-button" />Previous</div>
+                        <div id="next-btn" onClick={nextProject}>Next<MdKeyboardArrowRight className="proj-button"/></div>
+                    </div>
+                );
+            }
+        });
+    }, [projectName]);
+
+    useEffect(() => {
+        if(currentProject != null){
+            setProjectName(SliderData[currentProject].projName);
+            setTechnology(SliderData[currentProject].technology);
+            setDescription(SliderData[currentProject].description);
+            setImages(SliderData[currentProject].images);
+            setTimeout(() => {
+                history.push('/project');
+            }, 300);
+        }
+    }, [currentProject]);
+
+    console.log(projectsLength);
+    console.log(currentProject);
+        console.log(projectButtons);
 
     const closeBtn = <div id='close-popup-btn' onClick={()=>setPopup()}>X</div>
     const nextSlide = () => {
@@ -27,7 +69,6 @@ export default function Project(props) {
             <div id="popup-absolute">
                 <div id="popup-container">
                     {closeBtn}
-                    <div id="close-popup-btn-bg"></div>
                     <div id="img-absolute">
                         <div id="popup-img-container">
                             <img id="popup-img" src={popupImg} alt='popup project preview'/>
@@ -38,8 +79,6 @@ export default function Project(props) {
                     <>
                     <MdKeyboardArrowLeft className='popup-left-arrow' onClick={prevSlide} />
                     <MdKeyboardArrowRight className='popup-right-arrow' onClick={nextSlide} />
-                    <div id="popup-left-arrow-bg"></div>
-                    <div id="popup-right-arrow-bg"></div>
                     </>
                     :
                     null}
@@ -68,6 +107,7 @@ export default function Project(props) {
     return (
         <section id="project-page">
             <Menu/>
+            {projectButtons}
             <div id="project-page-container" className="page-container">
                 {popup}
                 <h2 id="project-title">Project: {projectName}</h2>
