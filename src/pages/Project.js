@@ -31,7 +31,7 @@ export default function Project(props) {
     );
 
     useEffect(() => {
-        SliderData.map((data) => {
+        SliderData.filter((data) => {
             
             if(data.projName == projectName){
                 setCurrentProject(data.id);
