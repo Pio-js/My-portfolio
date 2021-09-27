@@ -35,7 +35,7 @@ function App() {
           <Contact/>
         </Route>
         <Route path='/project'>
-          <Project projectName={projectName} technology={technology} description={description} images={images}/>
+          <Project projectName={projectName} technology={technology} description={description} images={images} setProjectName={setProjectName} setTechnology={setTechnology} setDescription={setDescription} setImages={setImages}/>
         </Route>
         <Route path='/'>
           <NotFound/>
