@@ -27,6 +27,7 @@
     color: var(--about);
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
 
 .proj-button {

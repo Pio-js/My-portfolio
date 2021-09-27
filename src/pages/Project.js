@@ -13,47 +13,44 @@ export default function Project(props) {
     const [popup, setPopup] = useState();
     const [current, setCurrent] = useState();
     const [currentProject, setCurrentProject] = useState(null);
-    const [projectButtons, setProjectButtons] = useState(null);
     const length = images.length;
     const projectsLength = SliderData.length
 
+    const nextProject = () => {
+        setCurrentProject(currentProject === projectsLength - 1 ? 0 : currentProject + 1);
+    };
+    const prevProject = () => {
+        setCurrentProject(currentProject === 0 ? projectsLength - 1 : currentProject - 1);
+    };
+
+    const prevNextButtons = (
+        <div id="prev-next-btn">
+            <div id="prev-btn" onClick={prevProject}><MdKeyboardArrowLeft className="proj-button" />Previous</div>
+            <div id="next-btn" onClick={nextProject}>Next<MdKeyboardArrowRight className="proj-button"/></div>
+        </div>
+    );
+
     useEffect(() => {
-        SliderData.filter((data, index) => {
+        SliderData.map((data) => {
             
-            const nextProject = () => {
-                setCurrentProject(currentProject === projectsLength - 1 ? 0 : currentProject + 1);
-            };
-            const prevProject = () => {
-                setCurrentProject(currentProject === 0 ? projectsLength - 1 : currentProject - 1);
-            };
             if(data.projName == projectName){
-                setCurrentProject(index);
-                
-                setProjectButtons(
-                    <div id="prev-next-btn">
-                        <div id="prev-btn" onClick={prevProject}><MdKeyboardArrowLeft className="proj-button" />Previous</div>
-                        <div id="next-btn" onClick={nextProject}>Next<MdKeyboardArrowRight className="proj-button"/></div>
-                    </div>
-                );
+                setCurrentProject(data.id);
             }
         });
     }, [projectName]);
 
     useEffect(() => {
-        if(currentProject != null){
+        if(currentProject!=null){
             setProjectName(SliderData[currentProject].projName);
             setTechnology(SliderData[currentProject].technology);
             setDescription(SliderData[currentProject].description);
             setImages(SliderData[currentProject].images);
-            setTimeout(() => {
-                history.push('/project');
-            }, 300);
+            history.push('/project');
         }
     }, [currentProject]);
 
     console.log(projectsLength);
     console.log(currentProject);
-        console.log(projectButtons);
 
     const closeBtn = <div id='close-popup-btn' onClick={()=>setPopup()}>X</div>
     const nextSlide = () => {
@@ -107,7 +104,7 @@ export default function Project(props) {
     return (
         <section id="project-page">
             <Menu/>
-            {projectButtons}
+            {prevNextButtons}
             <div id="project-page-container" className="page-container">
                 {popup}
                 <h2 id="project-title">Project: {projectName}</h2>
