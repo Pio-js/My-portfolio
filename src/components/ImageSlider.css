@@ -108,7 +108,7 @@
 
 @media (max-width: 800px) {
     .slider {
-        width: 100%;
+        max-width: 100%;
     }
 
     .slide-img {
