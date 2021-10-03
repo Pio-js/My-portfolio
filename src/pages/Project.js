@@ -31,7 +31,7 @@ export default function Project(props) {
     );
 
     useEffect(() => {
-        SliderData.map((data) => {
+        SliderData.filter((data) => {
             
             if(data.projName == projectName){
                 setCurrentProject(data.id);
@@ -43,14 +43,11 @@ export default function Project(props) {
         if(currentProject!=null){
             setProjectName(SliderData[currentProject].projName);
             setTechnology(SliderData[currentProject].technology);
-            setDescription(SliderData[currentProject].description);
+            setDescription(SliderData[currentProject].fullDescription);
             setImages(SliderData[currentProject].images);
             history.push('/project');
         }
     }, [currentProject]);
-
-    console.log(projectsLength);
-    console.log(currentProject);
 
     const closeBtn = <div id='close-popup-btn' onClick={()=>setPopup()}>X</div>
     const nextSlide = () => {

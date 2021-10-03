@@ -1,5 +1,5 @@
 #skills {
-    background-color: var(--skills);
+    background-image: var(--skills-linear);
     overflow-x: hidden;
 }
 
@@ -99,8 +99,11 @@
 }
 
 @media (max-width: 800px){
+    #skills {
+        background-image: var(--skills-radial);
+    }
     #skills-container {
-        overflow-y: scroll;
+        overflow-y: auto;
     }
     
     #skills-chart, #skills-txt {

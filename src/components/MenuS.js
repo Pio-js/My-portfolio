@@ -16,18 +16,18 @@ export default function MenuS(){
 
     return (
     <>
-        <button onClick={handleToggle}>{navbarOpen? (
+        <button onClick={handleToggle}>{navbarOpen? 
             null
-            ): (
+            :
             <FiMenu className="no-outline nav-closed" />
-            )}
+            }
         </button>
-        <ul className={`menuNav ${navbarOpen ? " showMenu" : ""}`}>
+        <ul className={`menuNav ${navbarOpen ? "showMenu" : null}`}>
             <button className ="close-btn" onClick={handleToggle}>{navbarOpen? (
-            <MdClose className="no-outline nav-open" />
-            ): (
-            null
-            )}
+                <MdClose className="no-outline nav-open" />
+                ): (
+                null
+                )}
             </button>
             <NavLink exact to='/' activeClassName="active">
                 <button onClick={()=>closeMenu(false)}>Home</button>

@@ -1,21 +1,29 @@
 :root {
   --primary: rgb(30, 141, 179);
-  --primary-dark: rgb(32, 144, 183);
+  --primary-dark: rgb(17, 68, 102);
   --primary-hell: rgb(217, 214, 37);
+  --primary-radial: radial-gradient(rgb(30, 141, 179), rgb(17, 68, 102));
   --about: rgb(30, 107, 179);
   --about-dark: rgb(21, 78, 131);
   --about-hover: rgba(123, 178, 204, 0.6);
-  --about-gradient: linear-gradient(90deg, rgb(30, 107, 179) 10%, rgb(30, 107, 179), rgb(12, 42, 70));
+  --about-linear: linear-gradient(90deg, rgb(30, 107, 179) 10%, rgb(30, 107, 179), rgb(12, 42, 70));
+  --about-radial: radial-gradient(rgb(30, 107, 179), black);
   --skills: rgb(37, 171, 217);
-  --skills-dark: rgb(32, 144, 183);
+  --skills-dark: rgb(30, 107, 179);
+  --skills-linear: linear-gradient(90deg, rgb(37, 171, 217) 10%, rgb(37, 171, 217), rgb(30, 107, 179));
+  --skills-radial: radial-gradient(rgb(37, 171, 217), rgb(30, 107, 179));
   --skills-hover: rgba(207, 27, 192, 0.8);
-  --projects: rgb(212, 127, 16);
+  --projects: rgb(171, 15, 177);
   --projects-text-bg: rgb(70, 86, 187);
-  --projects-dark: rgb(131, 79, 11);
-  --projects-hover: rgba(219, 165, 65, 0.8);
-  --contact: rgb(187, 34, 85);
+  --projects-dark: rgb(97, 9, 100);
+  --projects-hover: rgba(70, 86, 187, 0.8);
+  --projects-linear: linear-gradient(90deg, rgb(171, 15, 177) 10%, rgb(171, 15, 177), rgb(97, 9, 100));
+  --projects-radial: radial-gradient(rgb(171, 15, 177), rgb(97, 9, 100));
+  --contact: rgb(184, 26, 78);
   --contact-dark: rgb(119, 22, 54);
   --contact-hover: rgba(157, 35, 206, 0.8);
+  --contact-linear: linear-gradient(90deg, rgb(184, 26, 78) 10%, rgb(184, 26, 78), rgb(119, 22, 54));
+  --contact-radial: radial-gradient(rgb(184, 26, 78), rgb(119, 22, 54));
 }
 
 .App {
@@ -41,11 +49,6 @@ section {
 .page-container {
   width: 70%;
   margin-top: 10vh;
-  /* background-color: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(10px);
-  border: 1px solid white;
-  border-radius: 15px 15px 0 0;
-  box-shadow: 2px 2px 15px black; */
 }
 
 /* navigation */
@@ -132,6 +135,7 @@ nav {
   box-shadow: none;
   color: rgb(245, 225, 100);
   background-color: transparent;
+  background-image: none;
 }
 
 .active:hover {
@@ -160,19 +164,19 @@ p {
 }
 
 .footer-about {
-  background-color: var(--about);
+  background-image: var(--about-linear);
 }
 
 .footer-skills {
-  background-color: var(--skills);
+  background-image: var(--skills-linear);
 }
 
 .footer-projects {
-  background-color: var(--projects);
+  background-image: var(--projects-linear);
 }
 
 .footer-contact {
-  background-color: var(--contact);
+  background-image: var(--contact-linear);
 }
 
 #footer > h5 {
@@ -181,19 +185,16 @@ p {
 
 @media (max-width: 1200px){
   .page-container {
-    width: 50%;
+    width: 70%;
+    margin-left: 20%;
   }
 }
 
 @media (max-width: 800px){
-  
-  .menu-w {
-    position: absolute;
-    height: auto;
-  }
 
   .page-container {
     width: 100%;
+    margin-left: 0;
   }
 
   p {
@@ -291,6 +292,26 @@ p {
   .active {
     background-color: var(--primary);
     font-size: 1.5em;
+  }
+
+  .footer-about {
+    background-image: none;
+    background-color: black;
+  }
+
+  .footer-skills {
+    background-image: none;
+    background-color: var(--skills-dark);
+  }
+
+  .footer-projects {
+    background-image: none;
+    background-color: var(--projects-dark);
+  }
+
+  .footer-contact {
+    background-image: none;
+    background-color: var(--contact-dark);
   }
 }
 

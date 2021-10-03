@@ -31,7 +31,6 @@ const ImageSlider = ({ setProjectName, setTechnology, setDescription, setImages,
         return (
             <div key={slide.id}>
                 <div className={index === current ? 'slide slide-active' : 'no-slide' } >
-                    
                     {index === current && (
                         <>
                             <div className ="project-title">
