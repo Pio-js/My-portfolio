@@ -3,7 +3,7 @@
 #about {
     display: flex;
     justify-content: center;
-    background-image: var(--about-gradient);
+    background-image: var(--about-linear);
     background-size: contain;
     background-position: bottom;
     background-repeat: no-repeat;
@@ -16,6 +16,11 @@
     flex-wrap: wrap;
     flex-direction: row-reverse;
     justify-content: center;
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(20px);
+    border-radius: 10px 10px 0 0;
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 #about-txt {
@@ -25,11 +30,6 @@
     text-align: justify;
     padding: 20px;
     color: white;
-    background-color: rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(30px);
-    border: 1px solid grey;
-    border-radius: 15px;
-    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
 }
 
 .slide-in-right {
@@ -68,13 +68,13 @@
     max-height: 55vh;
     min-width: 240px;
     min-height: 240px;
-    float: right;
     margin-left: 2vw;
+    margin-right: 2vw;
     background-image: url('../images/original.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    border-radius: 15px;
-    box-shadow: 3px 3px 10px rgb(22, 38, 46);
+    /* border-radius: 15px;
+    box-shadow: 3px 3px 10px rgb(22, 38, 46); */
 }
 
 .slide-in-top {
@@ -92,7 +92,7 @@
     100% {
         -webkit-transform: translateY(0);
                 transform: translateY(0);
-        opacity: 1;
+        opacity: 0.7;
     }
 }
 @keyframes slide-in-top {
@@ -104,7 +104,7 @@
     100% {
         -webkit-transform: translateY(0);
                 transform: translateY(0);
-        opacity: 1;
+        opacity: 0.7;
     }
 }
 
@@ -116,7 +116,7 @@
 
 @media (max-width: 800px){
     #about {
-        background-size: 200%;
+        background-image: var(--about-radial);
     }
 
     #about-container {
@@ -127,6 +127,11 @@
         width: 90%;
         min-width: 320px;
         margin-top: 25px;
+    }
+
+    #about-txt {
+        border: none;
+        border-radius: 0;
     }
     
     #my-pic {

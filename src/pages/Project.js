@@ -49,9 +49,6 @@ export default function Project(props) {
         }
     }, [currentProject]);
 
-    console.log(projectsLength);
-    console.log(currentProject);
-
     const closeBtn = <div id='close-popup-btn' onClick={()=>setPopup()}>X</div>
     const nextSlide = () => {
         setCurrent(current === length - 1 ? 0 : current + 1);

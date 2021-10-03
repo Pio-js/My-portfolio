@@ -1,5 +1,5 @@
 #projects {
-    background-color: var(--projects);
+    background-image: var(--projects-linear);
 }
 
 #pro-container {
@@ -19,4 +19,10 @@
 
 #projects-text > p {
     margin: 0;
+}
+
+@media (max-width: 800px){
+    #projects {
+        background-image: var(--projects-radial);
+    }
 }

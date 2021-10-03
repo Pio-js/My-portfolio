@@ -1,5 +1,5 @@
 #contact {
-    background-color: var(--contact);
+    background-image: var(--contact-linear);
 }
 
 #contact-container {
@@ -95,12 +95,20 @@ form > button:hover {
 }
 
 @media (max-width: 800px){
+    #contact {
+        background-image: var(--contact-radial);
+    }
+
     #contact-container {
         width: 100%;
     }
 
     #contact-msg {
         bottom: -30px;
+    }
+
+    form > button {
+        font-size: 1em;
     }
 
     form > button:hover {

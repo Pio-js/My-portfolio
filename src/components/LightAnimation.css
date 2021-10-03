@@ -1,10 +1,9 @@
 .light {
     position: absolute;
     width: 0px;
-    opacity: .75;
+    opacity: .85;
     background-color: white;
     box-shadow: #e9f1f1 0px 0px 20px 2px;
-    opacity: 0;
     top: 100vh;
     bottom: 0px;
     left: 0px;
@@ -17,9 +16,9 @@
   -moz-animation: floatUp 4s infinite linear;
   -o-animation: floatUp 4s infinite linear;
   animation: floatUp 4s infinite linear;
-   -webkit-transform: scale(1.0);
-   -moz-transform: scale(1.0);
-   -o-transform: scale(1.0);
+  -webkit-transform: scale(1.0);
+  -moz-transform: scale(1.0);
+  -o-transform: scale(1.0);
   transform: scale(1.0);
 }
 
