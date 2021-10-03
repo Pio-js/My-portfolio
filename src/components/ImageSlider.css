@@ -7,6 +7,7 @@
     background-color: darkgray;
     overflow: hidden;
     border: 1px solid black;
+    border-radius: 5px;
     box-shadow: inset 2px 2px 15px rgb(22, 38, 46)/* ,
                 2px 2px 15px var(--projects-dark) */;
 }
@@ -112,7 +113,7 @@
     }
 
     .slide-img {
-        width: 100%;
+        max-width: 100%;
     }
 
     .project-title > h3 {
