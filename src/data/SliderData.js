@@ -36,7 +36,8 @@ export const SliderData = [
         description: 'I am currently working on this project.',
         fullDescription: 'I am creating this website for a musician. This project will have a back-end side, in order to change easily texts, images and events. I will create a page where the Client can change everything by himself.',
         technology: [css, html, js, react, nodeJS, express, mongoDB, mongoose],
-        images: [{image:robMobHome, desc:'Mobile version'}, {image:rebMobEvent, desc:'Mobile version'}, {image:rebMobContact, desc:'Mobile version'}]
+        images: [{image:robMobHome, desc:'Mobile version'}, {image:rebMobEvent, desc:'Mobile version'}, {image:rebMobContact, desc:'Mobile version'}],
+        gitHubLink: null
     },
     {
         id:1,
@@ -45,25 +46,28 @@ export const SliderData = [
         description: 'A website to promote Italian fine food.',
         fullDescription: 'I created this website to ensure my presence in Internet, promoting my business. For this project I used Wordpress creating every part inside of it. This website is no more reachable because I decided to change carrier.',
         technology: [css, html, js, wordpress],
-        images: [{image:saaHome, desc:'Desktop version'}, {image:saaProdukte, desc:'Desktop version'}, {image:saaRezepte, desc:'Desktop version'}, {image:saaMobile1, desc:'Mobile version'}, {image:saaMobile2, desc:'Mobile version'}]
+        images: [{image:saaHome, desc:'Desktop version'}, {image:saaProdukte, desc:'Desktop version'}, {image:saaRezepte, desc:'Desktop version'}, {image:saaMobile1, desc:'Mobile version'}, {image:saaMobile2, desc:'Mobile version'}],
+        gitHubLink: null
     },
     {
         id:2,
         projName: 'Portfolio',
         preview: web3,
         description: 'This is the website you are navigating on',
-        fullDescription: 'This is my first portfolio responsive website, I am still working and practicing on it, so it could be that there is some bugs yet. You can check it just navigating. Every comment is welcome. The contact form is disabled, so please mail me on LinkedIn or to my private e-mail if you got it.',
+        fullDescription: 'This is my first portfolio responsive website, I am still working and practicing on it, so it could be that there is some bugs yet. You can check it just navigating. Every comment is welcome. The contact form is disabled, so please mail me on LinkedIn or to my private e-mail if you got it. You find this project on ',
         technology: [css, html, js, react],
-        images: [{image:portfolioHome, desc:'Desktop version'}]
+        images: [{image:portfolioHome, desc:'Desktop version'}],
+        gitHubLink: 'https://github.com/Pio-js/My-portfolio'
     },
     {
         id:3,
         projName: 'Greet Now',
         preview: greetnowHome,
         description: 'A web app to create and send greeting cards',
-        fullDescription: 'This is a team project. We created an app to send greeting cards. This project was a good practice and we use it as final project for our graduation day. I created the authentication in the front and back-end using JWT and Bcrypt. Furthermore I created several cores components. This project is not publicand not published. If you want to know more about that, please just let me know.',
+        fullDescription: 'This is a team project. We created an app to send greeting cards. This project was a good practice and we use it as final project for our graduation day. I created the first SPA structure, authentication component in the front and back-end using JWT and Bcrypt. Furthermore I created several components. This is a MVP and you can find it on ',
         technology: [css, html, js, react, redux, materialUI, nodeJS, mongoDB, mongoose, clickUp, gitHub, figma],
-        images: [{image:greetnowHome, desc:'Desktop version'}, {image:greetnowLogin, desc:'Desktop version'}, {image:greetnowCard, desc:'Desktop version'}]
+        images: [{image:greetnowHome, desc:'Desktop version'}, {image:greetnowLogin, desc:'Desktop version'}, {image:greetnowCard, desc:'Desktop version'}],
+        gitHubLink: "https://github.com/kornavol/GreetNow-front"
     }
 ];
 

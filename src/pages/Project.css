@@ -57,6 +57,11 @@
     background-color: antiquewhite;
 }
 
+#project-full-description > p {
+    padding: 20px;
+    text-align: justify;
+}
+
 #project-img-preview {
     width: 90%;
     background-color: silver;
@@ -118,6 +123,7 @@
 #img-absolute {
     max-width: 100%;
     max-height: 100%;
+    background-position-x: initial;
 }
 
 #close-popup-btn {
