@@ -15,7 +15,8 @@ function App() {
   const [technology, setTechnology] = useState();
   const [description, setDescription] = useState();
   const [images, setImages] = useState();
- 
+  const [gitHubLink, setGitHubLink] = useState();
+
   return (
     <div className="App">
       <Switch>
@@ -29,13 +30,13 @@ function App() {
           <Skills/>
         </Route>
         <Route path='/projects'>
-          <Projects setProjectName={setProjectName} setTechnology={setTechnology} setDescription={setDescription} setImages={setImages}/>
+          <Projects setProjectName={setProjectName} setTechnology={setTechnology} setDescription={setDescription} setImages={setImages} setGitHubLink={setGitHubLink}/>
         </Route>
         <Route path='/contact'>
           <Contact/>
         </Route>
         <Route path='/project'>
-          <Project projectName={projectName} technology={technology} description={description} images={images} setProjectName={setProjectName} setTechnology={setTechnology} setDescription={setDescription} setImages={setImages}/>
+          <Project projectName={projectName} technology={technology} description={description} images={images} gitHubLink={gitHubLink} setProjectName={setProjectName} setTechnology={setTechnology} setDescription={setDescription} setImages={setImages} setGitHubLink={setGitHubLink}/>
         </Route>
         <Route path='/'>
           <NotFound/>

@@ -3,7 +3,7 @@ import { useHistory } from 'react-router-dom';
 import './ImageSlider.css';
 import { MdKeyboardArrowRight, MdKeyboardArrowLeft } from 'react-icons/md';
 
-const ImageSlider = ({ setProjectName, setTechnology, setDescription, setImages, slides }) => {
+const ImageSlider = ({ setProjectName, setTechnology, setDescription, setImages, setGitHubLink, slides }) => {
     const history = useHistory();
     const [current, setCurrent] = useState(0);
     const length = slides.length;
@@ -26,6 +26,7 @@ const ImageSlider = ({ setProjectName, setTechnology, setDescription, setImages,
             setTechnology(slide.technology);
             setDescription(slide.fullDescription);
             setImages(slide.images);
+            setGitHubLink(slide.gitHubLink);
             history.push('/project');
         }
         return (

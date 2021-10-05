@@ -16,12 +16,12 @@
   --projects: rgb(171, 15, 177);
   --projects-text-bg: rgb(70, 86, 187);
   --projects-dark: rgb(97, 9, 100);
-  --projects-hover: rgba(70, 86, 187, 0.8);
+  --projects-hover: rgba(216, 201, 69, 0.8);
   --projects-linear: linear-gradient(90deg, rgb(171, 15, 177) 10%, rgb(171, 15, 177), rgb(97, 9, 100));
   --projects-radial: radial-gradient(rgb(171, 15, 177), rgb(97, 9, 100));
   --contact: rgb(184, 26, 78);
   --contact-dark: rgb(119, 22, 54);
-  --contact-hover: rgba(157, 35, 206, 0.8);
+  --contact-hover: rgba(241, 150, 76, 0.8);
   --contact-linear: linear-gradient(90deg, rgb(184, 26, 78) 10%, rgb(184, 26, 78), rgb(119, 22, 54));
   --contact-radial: radial-gradient(rgb(184, 26, 78), rgb(119, 22, 54));
 }
@@ -194,13 +194,9 @@ p {
 
   .menu-w {
     position: absolute;
-    left: 0;
-    width: 10%;
     min-width: 0;
     max-width: 0;
     height: auto;
-    z-index: 10;
-    background-color: transparent;
   }
 
   .page-container {

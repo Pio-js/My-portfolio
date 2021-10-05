@@ -9,12 +9,12 @@ export default function Project(props) {
 
     const history = useHistory();
 
-    const {projectName, technology, description, images, setProjectName, setTechnology, setDescription, setImages} = props;
+    const {projectName, technology, description, images, gitHubLink, setProjectName, setTechnology, setDescription, setImages, setGitHubLink} = props;
     const [popup, setPopup] = useState();
     const [current, setCurrent] = useState();
     const [currentProject, setCurrentProject] = useState(null);
     const length = images.length;
-    const projectsLength = SliderData.length
+    const projectsLength = SliderData.length;
 
     const nextProject = () => {
         setCurrentProject(currentProject === projectsLength - 1 ? 0 : currentProject + 1);
@@ -25,11 +25,12 @@ export default function Project(props) {
 
     const prevNextButtons = (
         <div id="prev-next-btn">
-            <div id="prev-btn" onClick={prevProject}><MdKeyboardArrowLeft className="proj-button" />Previous</div>
+            <div id="prev-btn" onClick={prevProject}><MdKeyboardArrowLeft className="proj-button"/>Previous</div>
             <div id="next-btn" onClick={nextProject}>Next<MdKeyboardArrowRight className="proj-button"/></div>
         </div>
     );
 
+    //setting the current project for the prev-next projects buttons on the head
     useEffect(() => {
         SliderData.filter((data) => {
             
@@ -45,6 +46,7 @@ export default function Project(props) {
             setTechnology(SliderData[currentProject].technology);
             setDescription(SliderData[currentProject].fullDescription);
             setImages(SliderData[currentProject].images);
+            setGitHubLink(SliderData[currentProject].gitHubLink);
             history.push('/project');
         }
     }, [currentProject]);
@@ -111,7 +113,7 @@ export default function Project(props) {
                 </div>
                 <div id="project-full-description">
                     <h4>Description</h4>
-                    <p>{description}</p>
+                    <p>{description}{gitHubLink != null ? <a style={{color: "blue"}} href={gitHubLink}>gitHub.</a> : null}</p>
                 </div>
                 <div id="project-img-preview">
                     <h3>Click on a picture to enlarge it.</h3>
