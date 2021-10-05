@@ -109,7 +109,7 @@
 
 @media (max-width: 800px) {
     .slider {
-        max-width: 100%;
+        width: 100%;
     }
 
     .slide-img {
